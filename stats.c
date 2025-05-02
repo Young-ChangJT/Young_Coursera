@@ -41,13 +41,20 @@ void main() {
   printf("Original array:\n");
   print_array(test, SIZE);
   printf("\n");
+
+  printf("Statistics before sorting:\n");
+  print_statistics(test, SIZE);
+  printf("\n");
 }
 
 /* Add other Implementation File Code Here */
 
 /* Function to print statistics */
 void print_statistics(unsigned char* data, unsigned int size) {
-  // TODO
+  printf("Minimum: %u\n", find_minimum(data, size));
+  printf("Maximum: %u\n", find_maximum(data, size));
+  printf("Mean:    %u\n", find_mean(data, size));
+  printf("Median:  %u\n", find_median(data, size));
 }
 
 /* Function to print array */

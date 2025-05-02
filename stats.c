@@ -99,8 +99,13 @@ unsigned char find_mean(unsigned char* data, unsigned int size) {
 
 /* Function to find maximum */
 unsigned char find_maximum(unsigned char* data, unsigned int size) {
-  // TODO
-  return 0;
+  unsigned char max = data[0];
+  for (unsigned int i = 1; i < size; i++) {
+    if (data[i] > max) {
+      max = data[i];
+    }
+  }
+  return max;
 }
 
 /* Function to find minimum */

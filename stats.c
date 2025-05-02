@@ -9,14 +9,14 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Implementation file for basic statistics functions.
  *
- * <Add Extended Description Here>
+ * This file contains implementations of functions that calculate
+ * the minimum, maximum, mean, and median of a data set, and sort the data.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
- *
+ * @author Chang Jih-Teng
+ * @date May 2, 2025
  */
 
 
@@ -35,9 +35,48 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
+  /* Other Variable Declarations Go Here *
   /* Statistics and Printing Functions Go Here */
 
 }
 
 /* Add other Implementation File Code Here */
+
+/* Function to print statistics */
+void print_statistics(unsigned char* data, unsigned int size) {
+  // TODO
+}
+
+/* Function to print array */
+void print_array(unsigned char* data, unsigned int size) {
+  // TODO
+}
+
+/* Function to find median */
+unsigned char find_median(unsigned char* data, unsigned int size) {
+  // TODO
+  return 0;
+}
+
+/* Function to find mean */
+unsigned char find_mean(unsigned char* data, unsigned int size) {
+  // TODO
+  return 0;
+}
+
+/* Function to find maximum */
+unsigned char find_maximum(unsigned char* data, unsigned int size) {
+  // TODO
+  return 0;
+}
+
+/* Function to find minimum */
+unsigned char find_minimum(unsigned char* data, unsigned int size) {
+  // TODO
+  return 0;
+}
+
+/* Function to sort array descending */
+void sort_array(unsigned char* data, unsigned int size) {
+  // TODO
+}

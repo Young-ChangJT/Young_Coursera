@@ -110,8 +110,13 @@ unsigned char find_maximum(unsigned char* data, unsigned int size) {
 
 /* Function to find minimum */
 unsigned char find_minimum(unsigned char* data, unsigned int size) {
-  // TODO
-  return 0;
+  unsigned char min = data[0];
+  for (unsigned int i = 1; i < size; i++) {
+    if (data[i] < min) {
+      min = data[i];
+    }
+  }
+  return min;
 }
 
 /* Function to sort array descending */

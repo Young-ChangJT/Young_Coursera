@@ -66,8 +66,26 @@ void print_array(unsigned char* data, unsigned int size) {
 
 /* Function to find median */
 unsigned char find_median(unsigned char* data, unsigned int size) {
-  // TODO
-  return 0;
+  unsigned char temp[size];
+  for (unsigned int i = 0; i < size; i++) {
+    temp[i] = data[i];
+  }
+
+  for (unsigned int i = 0; i < size - 1; i++) {
+    for (unsigned int j = 0; j < size - i - 1; j++) {
+      if (temp[j] < temp[j + 1]) {
+        unsigned char t = temp[j];
+        temp[j] = temp[j + 1];
+        temp[j + 1] = t;
+      }
+    }
+  }
+
+  if (size % 2 == 0) {
+    return (temp[size/2 - 1] + temp[size/2]) / 2;
+  } else {
+    return temp[size/2];
+  }
 }
 
 /* Function to find mean */

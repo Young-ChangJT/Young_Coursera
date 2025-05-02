@@ -37,7 +37,10 @@ void main() {
 
   /* Other Variable Declarations Go Here *
   /* Statistics and Printing Functions Go Here */
-
+  
+  printf("Original array:\n");
+  print_array(test, SIZE);
+  printf("\n");
 }
 
 /* Add other Implementation File Code Here */
@@ -49,7 +52,9 @@ void print_statistics(unsigned char* data, unsigned int size) {
 
 /* Function to print array */
 void print_array(unsigned char* data, unsigned int size) {
-  // TODO
+  for (unsigned int i = 0; i < size; i++) {
+    printf("Index %2u: %u\n", i, data[i]);
+  }
 }
 
 /* Function to find median */

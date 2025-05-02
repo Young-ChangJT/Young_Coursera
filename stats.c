@@ -45,6 +45,15 @@ void main() {
   printf("Statistics before sorting:\n");
   print_statistics(test, SIZE);
   printf("\n");
+
+  sort_array(test, SIZE);
+
+  printf("Sorted array (largest to smallest):\n");
+  print_array(test, SIZE);
+  printf("\n");
+
+  printf("Statistics after sorting:\n");
+  print_statistics(test, SIZE);
 }
 
 /* Add other Implementation File Code Here */
@@ -121,5 +130,13 @@ unsigned char find_minimum(unsigned char* data, unsigned int size) {
 
 /* Function to sort array descending */
 void sort_array(unsigned char* data, unsigned int size) {
-  // TODO
+  for (unsigned int i = 0; i < size - 1; i++) {
+    for (unsigned int j = 0; j < size - i - 1; j++) {
+      if (data[j] < data[j + 1]) {
+        unsigned char temp = data[j];
+        data[j] = data[j + 1];
+        data[j + 1] = temp;
+      }
+    }
+  }
 }

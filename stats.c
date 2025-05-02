@@ -90,8 +90,11 @@ unsigned char find_median(unsigned char* data, unsigned int size) {
 
 /* Function to find mean */
 unsigned char find_mean(unsigned char* data, unsigned int size) {
-  // TODO
-  return 0;
+  unsigned int sum = 0;
+  for (unsigned int i = 0; i < size; i++) {
+    sum += data[i];
+  }
+  return (unsigned char)(sum / size);
 }
 
 /* Function to find maximum */

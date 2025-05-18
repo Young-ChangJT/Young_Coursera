@@ -24,7 +24,6 @@ else
 	endif
 
 # Add your include paths to this variable
-# Add your include paths to this variable
 ifeq ($(PLATFORM),MSP432)
 	INCLUDES = 	   -I../include/CMSIS \
 			   -I../include/common \

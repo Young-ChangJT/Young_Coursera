@@ -33,7 +33,7 @@ include sources.mk
 ifeq ($(PLATFORM),MSP432)
 		CC = arm-none-eabi-gcc
 		LD = arm-none-eabi-ld
-		LINKER_FILE = ../msp432p401r.lds
+		LINKER_FILE = ../m3/msp432p401r.lds
 		LDFLAGS = -Wl,-Map=$(TARGET).map -T $(LINKER_FILE)
 		# Architectures Specific Flags ARM
 		CPU = cortex-m4

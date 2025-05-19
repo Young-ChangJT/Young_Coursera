@@ -12,9 +12,9 @@ Discarded input sections
  .note.GNU-stack
                 0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o
  .note.GNU-stack
-                0x0000000000000000        0x0 /tmp/ccU5cZyL.o
+                0x0000000000000000        0x0 /tmp/ccvbGDg9.o
  .note.GNU-stack
-                0x0000000000000000        0x0 /tmp/cc0R3gtO.o
+                0x0000000000000000        0x0 /tmp/ccjyZIeC.o
  .note.GNU-stack
                 0x0000000000000000        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
  .note.GNU-stack
@@ -32,8 +32,8 @@ Linker script and memory map
 LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o
 LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o
 LOAD /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o
-LOAD /tmp/ccU5cZyL.o
-LOAD /tmp/cc0R3gtO.o
+LOAD /tmp/ccvbGDg9.o
+LOAD /tmp/ccjyZIeC.o
 LOAD /usr/lib/gcc/x86_64-linux-gnu/6/libgcc.a
 LOAD /usr/lib/gcc/x86_64-linux-gnu/6/libgcc_s.so
 START GROUP
@@ -163,9 +163,9 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
  .text          0x000000000000059b        0x0 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o
  *fill*         0x000000000000059b        0x5 
  .text          0x00000000000005a0      0x100 /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o
- .text          0x00000000000006a0       0x73 /tmp/ccU5cZyL.o
+ .text          0x00000000000006a0       0x73 /tmp/ccvbGDg9.o
                 0x00000000000006a0                main
- .text          0x0000000000000713       0x97 /tmp/cc0R3gtO.o
+ .text          0x0000000000000713       0x97 /tmp/ccjyZIeC.o
                 0x0000000000000713                func
  *fill*         0x00000000000007aa        0x6 
  .text          0x00000000000007b0       0x72 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
@@ -188,9 +188,9 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.cst4   0x0000000000000830        0x4 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o
                 0x0000000000000830                _IO_stdin_used
- .rodata        0x0000000000000834        0x4 /tmp/ccU5cZyL.o
+ .rodata        0x0000000000000834        0x4 /tmp/ccvbGDg9.o
                 0x0000000000000834                g2
- .rodata        0x0000000000000838        0xe /tmp/cc0R3gtO.o
+ .rodata        0x0000000000000838        0xe /tmp/ccjyZIeC.o
 
 .rodata1
  *(.rodata1)
@@ -207,9 +207,9 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
  .eh_frame      0x00000000000008c0       0x40 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o
  .eh_frame      0x0000000000000900       0x18 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o
                                          0x30 (size before relaxing)
- .eh_frame      0x0000000000000918       0x28 /tmp/ccU5cZyL.o
+ .eh_frame      0x0000000000000918       0x28 /tmp/ccvbGDg9.o
                                          0x40 (size before relaxing)
- .eh_frame      0x0000000000000940       0x20 /tmp/cc0R3gtO.o
+ .eh_frame      0x0000000000000940       0x20 /tmp/ccjyZIeC.o
                                          0x38 (size before relaxing)
  .eh_frame      0x0000000000000960       0x60 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
                                          0x78 (size before relaxing)
@@ -315,10 +315,10 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
  .data.rel.local
                 0x0000000000201008        0x8 /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o
                 0x0000000000201008                __dso_handle
- .data          0x0000000000201010        0x1 /tmp/ccU5cZyL.o
+ .data          0x0000000000201010        0x1 /tmp/ccvbGDg9.o
                 0x0000000000201010                g3
  *fill*         0x0000000000201011        0xf 
- .data          0x0000000000201020       0x28 /tmp/cc0R3gtO.o
+ .data          0x0000000000201020       0x28 /tmp/ccjyZIeC.o
                 0x0000000000201020                g5
  .data          0x0000000000201048        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
  .data          0x0000000000201048        0x0 /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o
@@ -346,9 +346,9 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
  .bss           0x0000000000201048        0x0 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o
  .bss           0x0000000000201048        0x1 /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o
  *fill*         0x0000000000201049        0x3 
- .bss           0x000000000020104c        0x8 /tmp/ccU5cZyL.o
+ .bss           0x000000000020104c        0x8 /tmp/ccvbGDg9.o
                 0x000000000020104c                g4
- .bss           0x0000000000201054        0x4 /tmp/cc0R3gtO.o
+ .bss           0x0000000000201054        0x4 /tmp/ccjyZIeC.o
  .bss           0x0000000000201058        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
  .bss           0x0000000000201058        0x0 /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o
  .bss           0x0000000000201058        0x0 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
@@ -395,8 +395,8 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
  *(.comment)
  .comment       0x0000000000000000       0x2d /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o
                                          0x2e (size before relaxing)
- .comment       0x000000000000002d       0x2e /tmp/ccU5cZyL.o
- .comment       0x000000000000002d       0x2e /tmp/cc0R3gtO.o
+ .comment       0x000000000000002d       0x2e /tmp/ccvbGDg9.o
+ .comment       0x000000000000002d       0x2e /tmp/ccjyZIeC.o
  .comment       0x000000000000002d       0x2e /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o
 
 .debug

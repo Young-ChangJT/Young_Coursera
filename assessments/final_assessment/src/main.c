@@ -21,6 +21,7 @@
  *
  */
 
+#include "course1.h"
 
 #ifdef COURSE1
   course1();

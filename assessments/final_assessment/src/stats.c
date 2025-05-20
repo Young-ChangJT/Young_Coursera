@@ -23,6 +23,7 @@
 
 #include <stdio.h>
 #include "stats.h"
+#include "platform.h"
 
 /* Size of the Data Set */
 #define SIZE (40)
@@ -67,10 +68,18 @@ void print_statistics(unsigned char* data, unsigned int size) {
 }
 
 /* Function to print array */
-void print_array(unsigned char* data, unsigned int size) {
-  for (unsigned int i = 0; i < size; i++) {
-    printf("Index %2u: %u\n", i, data[i]);
+// void print_array(unsigned char* data, unsigned int size) {
+//   for (unsigned int i = 0; i < size; i++) {
+//     printf("Index %2u: %u\n", i, data[i]);
+//   }
+// }
+void print_array(unsigned char *array, unsigned int length) {
+#ifdef VERBOSE
+  for (int i = 0; i < length; i++) {
+    PRINTF("%d ", array[i]);
   }
+  PRINTF("\n");
+#endif
 }
 
 /* Function to find median */

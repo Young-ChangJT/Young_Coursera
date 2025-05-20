@@ -62,6 +62,15 @@ endif
 TARGET = c1m2
 
 CFLAGS = -Wall -Werror -g -O0 -std=c99 -D$(PLATFORM) $(ARMFLAGS)
+
+ifdef VERBOSE
+	CFLAGS += -DVERBOSE
+endif
+
+ifdef COURSE1
+	CFLAGS += -DCOURSE1
+endif
+
 CPPFLAGS = -E
 MAIN = main
 

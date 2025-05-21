@@ -45,6 +45,7 @@ int8_t test_data1() {
   value = my_atoi( ptr, digits, BASE_16);
   #ifdef VERBOSE
   PRINTF("  Initial number: %d\n", num);
+  PRINTF("  Middle Decimal number: %d\n", digits);
   PRINTF("  Final Decimal number: %d\n", value);
   #endif
   free_words( (uint32_t*)ptr );
@@ -74,6 +75,7 @@ int8_t test_data2() {
   value = my_atoi( ptr, digits, BASE_10);
   #ifdef VERBOSE
   PRINTF("  Initial Decimal number: %d\n", num);
+  PRINTF("  Middle Decimal number: %d\n", digits);
   PRINTF("  Final Decimal number: %d\n", value);
   #endif
   free_words( (uint32_t*)ptr );

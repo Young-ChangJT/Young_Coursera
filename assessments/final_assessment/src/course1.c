@@ -39,7 +39,6 @@ int8_t test_data1() {
   if (! ptr )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
 
   digits = my_itoa( num, ptr, BASE_16);   
@@ -53,7 +52,6 @@ int8_t test_data1() {
   if ( value != num )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   return TEST_NO_ERROR;
 }
@@ -70,7 +68,6 @@ int8_t test_data2() {
   if (! ptr )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
 
   digits = my_itoa( num, ptr, BASE_10);
@@ -84,7 +81,6 @@ int8_t test_data2() {
   if ( value != num )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   return TEST_NO_ERROR;
 }
@@ -102,7 +98,6 @@ int8_t test_memmove1() {
   if (! set ) 
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   
   ptra = &set[0];
@@ -123,7 +118,6 @@ int8_t test_memmove1() {
     if (set[i + 16] != i)
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
   }
 
@@ -144,7 +138,6 @@ int8_t test_memmove2() {
   if (! set )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   ptra = &set[0];
   ptrb = &set[8];
@@ -163,7 +156,6 @@ int8_t test_memmove2() {
     if (set[i + 8] != i)
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
   }
 
@@ -184,7 +176,6 @@ int8_t test_memmove3() {
   if (! set ) 
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   ptra = &set[8];
   ptrb = &set[0];
@@ -204,7 +195,6 @@ int8_t test_memmove3() {
     if (set[i] != (i + 8))
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
   }
 
@@ -227,7 +217,6 @@ int8_t test_memcopy() {
   if (! set ) 
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   ptra = &set[0];
   ptrb = &set[16];
@@ -246,7 +235,6 @@ int8_t test_memcopy() {
     if (set[i+16] != i)
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
   }
 
@@ -267,7 +255,6 @@ int8_t test_memset()
   if (! set )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   ptra = &set[0];
   ptrb = &set[16];
@@ -290,12 +277,10 @@ int8_t test_memset()
     if (set[i] != 0xFF)
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
     if (set[16 + i] != 0)
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
   }
   
@@ -319,7 +304,6 @@ int8_t test_reverse()
   if (! copy )
   {
     return TEST_ERROR;
-    PRINTF("TEST_ERROR\n"); //add
   }
   
   my_memcopy(set, copy, MEM_SET_SIZE_B);
@@ -333,7 +317,6 @@ int8_t test_reverse()
     if (set[i] != copy[MEM_SET_SIZE_B - i - 1])
     {
       ret = TEST_ERROR;
-      PRINTF("TEST_ERROR\n"); //add
     }
   }
 

@@ -32,6 +32,7 @@ uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base) {
     *ptr = '\0';
 
     // Reverse the string
+    uint8_t * original_start = start;
     uint8_t * end = ptr - 1;
     while (start < end) {
         uint8_t temp = *start;
@@ -41,7 +42,7 @@ uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base) {
         end--;
     }
 
-    return (ptr - start) + 1;
+    return (ptr - original_start) + 1;
 }
 
 int32_t my_atoi(uint8_t * ptr, uint8_t digits, uint32_t base) {

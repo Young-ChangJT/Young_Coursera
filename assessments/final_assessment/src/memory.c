@@ -62,12 +62,12 @@ uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length) {
     }
 
     if (dst > src && dst < src + length) {
-        // 從後面開始複製避免覆蓋
+        // Copy start from the end to prevent overlap
         for (size_t i = length; i > 0; i--) {
             *(dst + i - 1) = *(src + i - 1);
         }
     } else {
-        // 從前面開始複製
+        // Copy start from the begining
         for (size_t i = 0; i < length; i++) {
             *(dst + i) = *(src + i);
         }

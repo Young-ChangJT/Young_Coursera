@@ -10,7 +10,7 @@ uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base) {
         return 2;
     }
 
-    if (data < 0 && base == 10) {
+    if (data < 0) {
         is_negative = 1;
         data = -data;
     }

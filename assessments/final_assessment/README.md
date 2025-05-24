@@ -1,4 +1,4 @@
-# Coursera Embedded Systems - Final Assessment
+# Coursera Embedded Systems - Final Project
 
 ## Overview
 
@@ -25,7 +25,38 @@ The project demonstrates key concepts learned in the course, including:
 └── README.md         # This file
 ```
 
+## 🧪 Functional Modules
+
+### `main.c`
+- Contains `main()` used when running on HOST.
+- Calls `course1()` test function if `COURSE1` is defined.
+
+### `course1.c`
+- Contains test functions:
+  - `test_data1()` / `test_data2()` – Test `my_itoa()` and `my_atoi()`
+  - `test_memmove1()` ~ `test_memmove4()` – Test `my_memmove()` in different scenarios
+- Uses `PRINTF` macro for debug output when `VERBOSE` is defined.
+
+### `data.c` / `data.h`
+- `my_itoa(int32_t, uint8_t*, uint32_t)` – Converts integer to ASCII string in given base.
+- `my_atoi(uint8_t*, uint8_t, uint32_t)` – Converts ASCII string back to integer.
+
+### `memory.c` / `memory.h`
+- `my_memmove(uint8_t*, uint8_t*, size_t)` – Custom memory-safe move function supporting overlapping regions.
+- `reserve_words(size_t)` – Dynamically allocates word-aligned memory.
+- `free_words(uint32_t*)` – Frees memory allocated with `reserve_words`.
+
+### `platform.h`
+- Defines `PRINTF()` macro:
+  - Maps to `printf()` on `HOST`
+  - Becomes a no-op on `MSP432`
+
+### `stats.c` *(not used)*
+- Originally used in earlier assignments for statistical analysis. Ensure `main()` here is commented out or removed.
+
 ## Build Instructions
+
+### 1. For HOST platform
 
 To compile the project on the HOST platform:
 
@@ -66,20 +97,3 @@ This will execute `course1()` from `main.c` and run the test cases for:
 * All memory allocations are freed appropriately using `free_words()`.
 * The implementation adheres to the C99 standard and passes all test cases defined in `course1.c`.
 
-## Submission
-
-Please ensure that your `.zip` file includes:
-
-* All source code (`src/`, `include/`)
-* Your `.git/` folder (if submitting the repo)
-* This `README.md`
-* The compiled output (`c1final.out`, `c1final.map`, `c1final.asm`)
-* `Makefile`
-
-Example compression command:
-
-```bash
-zip -r Course1-YourName.zip .
-```
-
-Replace `YourName` with your actual name (no `< >` brackets).

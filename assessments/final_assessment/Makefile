@@ -59,7 +59,7 @@ endif
 # Compiler Flags and Defines
 	#-D$(PLATFORM) is put inside the CFLAGS. 
 
-TARGET = c1m2
+TARGET = c1final
 
 CFLAGS = -Wall -Werror -g -O0 -std=c99 -D$(PLATFORM) $(ARMFLAGS)
 

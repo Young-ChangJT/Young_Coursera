@@ -90,6 +90,34 @@ This will execute `course1()` from `main.c` and run the test cases for:
 * `reserve_words()` / `free_words()`
 * `memcpy`, `memmove`, `memset`, `memzero`
 
+### 2. For MSP432 platform
+
+To build the firmware for MSP432:
+
+```bash
+make PLATFORM=MSP432 COURSE1=1
+```
+
+This will:
+
+- Compile all source files for the ARM Cortex-M4 target
+- Link with `msp432p401r.lds`
+- Produce the firmware: `c1final.out`
+- Generate:
+  - `c1final.map`: memory map
+  - `c1final.asm`: disassembled code
+  - `src/*.o`, `src/*.d`: intermediate files
+
+---
+
+## 📦 Output Files
+
+- `c1final.out` – Final firmware binary (not executable on PC)
+- `c1final.map` – Linker memory map file
+- `c1final.asm` – Disassembly of output
+- `src/*.o` – Object files
+- `src/*.d` – Dependency files for Make
+
 ## Notes
 
 * This submission targets the **HOST platform** for easier testing and simulation.
